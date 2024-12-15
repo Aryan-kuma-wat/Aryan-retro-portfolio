@@ -1,0 +1,208 @@
+body {
+    background-color: #1d1f21; /* Dark background for an immersive feel */
+    font-family: 'Press Start 2P', cursive; /* Pixelated font */
+    color: #00ff7f; /* Bright green text */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+header {
+    background-color: #333644; /* Dark gray header */
+    text-align: center;
+    padding: 30px;
+    border: 5px solid #00ff7f; /* Green solid border */
+    box-shadow: 0 0 10px #00ff7f; /* Green glow effect */
+    animation: pulse 1s infinite; /* Pulsing glow effect */
+}
+
+nav {
+    background-color: #222228; /* Darker navigation */
+    padding: 15px;
+    border: 2px solid #00ff7f; /* Green border */
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center nav items */
+}
+
+nav ul li {
+    display: inline-block; /* Horizontal list */
+    margin: 0 15px; /* Equal spacing between items */
+}
+
+nav a {
+    text-decoration: none; /* Remove underline */
+    color: #00ff7f; /* Green links */
+    font-weight: bold;
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+nav a:hover {
+    color: #ff4500; /* Bright orange on hover */
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #00ff7f; /* Green border */
+    background-color: #282b34; /* Dark gray background for sections */
+    box-shadow: 0 0 10px #00ff7f; /* Green glow effect */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+section:hover {
+    background-color: #32353e; /* Slightly lighter gray on hover */
+}
+
+.project {
+    background-color: #3c4049; /* Slightly lighter gray for projects */
+    margin: 15px 0;
+    padding: 15px;
+    border: 2px solid #00ff7f; /* Green border */
+    transition: transform 0.3s; /* Smooth scaling effect */
+}
+
+.project:hover {
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #333644; /* Dark gray footer */
+    color: #00ff7f; /* Green text in footer */
+    border-top: 5px solid #00ff7f; /* Green solid border at the top */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+h1, h2, h3 {
+    text-shadow: 2px 2px #ff4500; /* Bright orange shadow for headings */
+}
+
+a {
+    color: #00ff7f; /* Green links */
+}
+
+a:hover {
+    color: #ff4500; /* Bright orange on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Add a pixelated border effect */
+.pixel-border {
+    border: 5px solid #00ff7f;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAF0lEQVR42mJ8//8/AwAB/0gD1gAAAABJRU5ErkJggg==');
+    background-size: 10px 10px; /* Pixel size */
+    background-repeat: repeat; /* Repeat the pixel pattern */
+    animation: flicker 0.15s infinite; /* Flickering effect */
+}
+
+h1 {
+    color: #ffcc00; /* Bright yellow for main title */
+    animation: bounce 2s infinite; /* Bouncing animation */
+}
+
+h2 {
+    color: #ff00ff; /* Magenta for section titles */
+}
+
+h3 {
+    color: #00ccff; /* Cyan for project titles */
+}
+
+ul {
+    list-style-type: square; /* Square bullets for skills */
+    padding-left: 20px; /* Indent list */
+}
+
+ul li {
+    color: #ffcc00; /* Yellow for list items */
+    margin: 5px 0; /* Space between list items */
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block; /* Stack navigation items on small screens */
+        margin: 10px 0; /* Space between items */
+    }
+
+    section {
+        margin: 10px; /* Reduce margin on small screens */
+        padding: 15px; /* Reduce padding on small screens */
+    }
+}
+
+.nav-toggle {
+    background: none;
+    border: none;
+    color: #00ff7f;
+    font-size: 24px;
+    cursor: pointer;
+    display: none; /* Hide by default */
+}
+
+nav ul {
+    display: flex; /* Default to flex for desktop */
+}
+
+nav ul.active {
+    display: block; /* Show as block when active */
+}
+
+@media (max-width: 600px) {
+    .nav-toggle {
+        display: block; /* Show toggle button on mobile */
+    }
+
+    nav ul {
+        display: none; /* Hide links by default on mobile */
+        flex-direction: column; /* Stack links vertically */
+    }
+
+    nav ul.active {
+        display: flex; /* Show links when active */
+    }
+}
+
+/* Keyframes for animations */
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 10px #00ff7f, 0 0 20px #00ff7f, 0 0 30px #00ff7f;
+    }
+    50% {
+        box-shadow: 0 0 20px #00ff7f, 0 0 30px #00ff7f, 0 0 40px #00ff7f;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes flicker {
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+        opacity: 1;
+    }
+    20%,
+    24%,
+    55% {
+        opacity: 0;
+    }
+}
